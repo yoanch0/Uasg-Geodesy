@@ -25,9 +25,6 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    text-align: center;
-    padding: 20px;
-    width: 90%;
 }
 
 .custom-card-bootstrap {
@@ -75,6 +72,71 @@ footer {
     left: 50%;
     transform: translate(-50%);
     margin: 0;
-
 }
 
+/*МОБИЛНОТО ОФОРМЛЕНИЕ Е ПРАВЕНО С ПОМОЩТА НА ИИ!!!*/
+@media (max-width: 500px) {
+
+    /* 1. Спираме абсолютното центриране, за да не бяга нагоре */
+    .hero-img {
+        width: 100vw !important;
+        height: 100vw !important;
+        object-fit: cover;
+        position: relative;
+    }
+
+    .hero-text {
+        position: relative !important; /* Текстът вече не плува, а стои под навигацията */
+        transform: none !important;
+        left: 0 !important;
+        top: 0 !important;
+        margin-top: -90vw !important; /* Вдига текста обратно върху снимката */
+        padding: 0 15px;
+        width: 100%;
+    }
+
+    /* 2. Намаляваме размерите на шрифта, за да не заема толкова място */
+    .display-3 {
+        font-size: 1.8rem !important;
+    }
+    
+    .h3 {
+        font-size: 1.2rem !important;
+    }
+
+    .hero-content {
+        padding: 10px !important;
+    }
+
+    /* 3. Намаляваме разстоянието между картите */
+    .container.mt-5 {
+        margin-top: 1rem !important;
+    }
+    .custom-table {
+        font-size: 12px; /* По-малък шрифт, за да влезе повече текст */
+    }
+    
+    .custom-table th, 
+    .custom-table td {
+        padding: 4px 2px !important; /* Минимални отстояния */
+        word-wrap: break-word;
+        max-width: 70px; /* Принуждава дългите думи да минат на нов ред */
+    }
+
+    .custom-table {
+    table-layout: fixed; /* Принуждава таблицата да спазва 100% ширина */
+    width: 100%;
+    word-break: break-word; /* Реже дългите думи, за да не излизат от клетките */
+    }
+
+    footer {
+    position: relative !important; /* Вече не стои "залепен" за екрана */
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px; /* Прави място между последната карта и края на страницата */
+    left: 0 !important;
+    transform: none !important;
+    background-color: #f8f9fa; /* Опция: лек сив фон за по-добра видимост */
+}
+}
