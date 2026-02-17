@@ -75,4 +75,22 @@ footer {
     left: 50%;
     transform: translate(-50%);
     margin: 0;
+
+}
+
+@media (max-width: 768px) {
+    .hero-text {
+        position: static;
+        transform: none;
+        color: white;
+        padding: 30px 15px;
+    }
+
+    .hero {
+        text-align: center;
+    }
+
+    .hero-img {
+        border-radius: 0;
+    }
 }
